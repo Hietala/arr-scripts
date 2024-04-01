@@ -39,7 +39,7 @@ QueueCleanerProcess () {
   fi
 
   # Lidarr
-  if [ "$arrPort" == "8686" ]; then
+  if [ "$arrPort" == "8686" ] || [ "$arrPort" == "8687" ]; then
     arrQueueData="$(curl -s "$arrUrl/api/v1/queue?page=1&pagesize=200&sortDirection=descending&sortKey=progress&includeUnknownArtistItems=true&apikey=${arrApiKey}" | jq -r .records[])"
   fi
   

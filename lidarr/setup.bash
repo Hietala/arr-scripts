@@ -2,6 +2,8 @@
 SMA_PATH="/usr/local/sma"
 version="1.2"
 
+base_url="https://raw.githubusercontent.com/Hietala"
+
 echo "*** install packages ***" && \
 apk add -U --upgrade --no-cache \
   tidyhtml \
